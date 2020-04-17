@@ -20,7 +20,7 @@ public class NguyenHuuNhat_59131688_StrateryPattern {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Bai tap 1
         Context bt1 = new Context();
         ITinh phepCong = new Cong();
         ITinh phepTru = new Tru();
