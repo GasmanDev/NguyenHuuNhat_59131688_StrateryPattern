@@ -17,6 +17,13 @@ public class HangHoa {
     public HangHoa() {
     }
 
+    public HangHoa(String tenHH, int gia, String moTa) {
+        this.tenHH = tenHH;
+        this.gia = gia;
+        this.moTa = moTa;
+    }
+    
+
     public String getTenHH() {
         return tenHH;
     }

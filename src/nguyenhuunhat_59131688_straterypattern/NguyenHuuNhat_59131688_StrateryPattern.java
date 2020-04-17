@@ -9,6 +9,10 @@ import BT1.Cong;
 import BT1.Context;
 import BT1.ITinh;
 import BT1.Tru;
+import BT2.GioHang;
+import BT2.IThanhToan;
+import BT2.ThanhToanCOD;
+import BT2.ThanhToanOnline;
 
 /**
  *
@@ -28,6 +32,17 @@ public class NguyenHuuNhat_59131688_StrateryPattern {
         System.out.println("Kết quả phép tính 75 + 12 = " + bt1.tinh(75, 12));
         bt1.setTinhToan(phepTru);
         System.out.println("Kết quả phép tính 54 - 78 = " + bt1.tinh(54, 78));
+        // Bai tap 2
+        GioHang gh1 = new GioHang();
+        GioHang gh2 = new GioHang();
+        IThanhToan thanhToanOnline = new ThanhToanOnline();
+        IThanhToan thanhToanCOD = new ThanhToanCOD();
+        
+        gh1.setHinhThucTT(thanhToanOnline);
+        gh2.setHinhThucTT(thanhToanCOD);
+        
+        HangHoa h1 = new HangHoa();
+        
     }
     
 }

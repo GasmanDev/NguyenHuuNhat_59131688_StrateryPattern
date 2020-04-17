@@ -47,7 +47,6 @@ public class GioHang {
         {
             System.out.println((i+1));
             System.out.println(dsHangHoa.get(i).inTTHangHoa());
-            
         }
     }
 }
