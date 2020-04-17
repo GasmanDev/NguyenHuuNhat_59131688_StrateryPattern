@@ -14,7 +14,13 @@ import BT2.HangHoa;
 import BT2.IThanhToan;
 import BT2.ThanhToanCOD;
 import BT2.ThanhToanOnline;
-
+import BT3.ISoSanh;
+import BT3.QLSV;
+import BT3.SinhVien;
+import BT3.SoSanhTheoDiem;
+import BT3.SoSanhTheoTen;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 /**
  *
  * @author MSI
@@ -24,7 +30,7 @@ public class NguyenHuuNhat_59131688_StrateryPattern {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // Bai tap 1
         Context bt1 = new Context();
         ITinh phepCong = new Cong();
@@ -60,7 +66,25 @@ public class NguyenHuuNhat_59131688_StrateryPattern {
         gh2.inGioHang();
         System.out.println("Tổng tiền hàng: " + gh2.tongTienHang() + " VND");
         System.out.println("Tổng tiền thanh toán: " + (int)gh2.tongThanhToan() + " VND");
+        //BT3
+        QLSV qlsv1 = new QLSV();
+        QLSV qlsv2 = new QLSV();
+        ISoSanh soSanhTheoTen = new SoSanhTheoTen();
+        ISoSanh soSanhTheoDiem = new SoSanhTheoDiem();
+        qlsv1.setSoSanh(soSanhTheoTen);
+        qlsv2.setSoSanh(soSanhTheoDiem);
+        SimpleDateFormat formaterDate = new SimpleDateFormat("dd/MM/yyyy");
+        SinhVien sv1 = new SinhVien("Nguyễn Hữu Nhật", formaterDate.parse("16/07/1999"), (float) 8.0);
+        SinhVien sv2 = new SinhVien("Nguyễn Hữu", formaterDate.parse("16/07/1999"), (float) 9.0);
+        qlsv1.themSinhVien(sv1);
+        qlsv1.themSinhVien(sv2);
+        qlsv1.sapXep();
+        qlsv1.inDS();
         
+        qlsv2.themSinhVien(sv1);
+        qlsv2.themSinhVien(sv2);
+        qlsv2.sapXep();
+        qlsv2.inDS();
     }
     
 }

@@ -6,7 +6,7 @@
 package BT3;
 
 import java.util.Date;
-
+import java.text.SimpleDateFormat;  
 /**
  *
  * @author MSI
@@ -50,6 +50,7 @@ public class SinhVien {
     }
     public String inThongTinSV()
     {
-        return "Tên sinh viên: " + this.hoTen + "| Ngày sinh: " + this.ngaySinh + "| Điểm trung bình: " + this.diemTB;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
+        return "Tên sinh viên: " + this.hoTen + "| Ngày sinh: " + formatter.format(this.ngaySinh) + "| Điểm trung bình: " + this.diemTB;
     }
 }
