@@ -10,6 +10,7 @@ import BT1.Context;
 import BT1.ITinh;
 import BT1.Tru;
 import BT2.GioHang;
+import BT2.HangHoa;
 import BT2.IThanhToan;
 import BT2.ThanhToanCOD;
 import BT2.ThanhToanOnline;
@@ -41,7 +42,24 @@ public class NguyenHuuNhat_59131688_StrateryPattern {
         gh1.setHinhThucTT(thanhToanOnline);
         gh2.setHinhThucTT(thanhToanCOD);
         
-        HangHoa h1 = new HangHoa();
+        HangHoa h1 = new HangHoa("Iphone X", 14000000, "Iphone X");
+        HangHoa h2 = new HangHoa("Iphone Xr", 12000000, "Iphone Xr Đỏ");
+        HangHoa h3 = new HangHoa("Airpod", 4000000, "Tai nghe Airpod");
+        
+        gh1.themHang(h1);
+        gh1.themHang(h2);
+
+        gh2.themHang(h3);
+        
+        System.out.println("Giỏ hàng 1, phương thức thanh toán Online");
+        gh1.inGioHang();
+        System.out.println("Tổng tiền hàng: " + gh1.tongTienHang() + " VND");
+        System.out.println("Tổng tiền thanh toán: " + (int)gh1.tongThanhToan() + " VND");
+        
+        System.out.println("Giỏ hàng 2, phương thức thanh toán COD");
+        gh2.inGioHang();
+        System.out.println("Tổng tiền hàng: " + gh2.tongTienHang() + " VND");
+        System.out.println("Tổng tiền thanh toán: " + (int)gh2.tongThanhToan() + " VND");
         
     }
     

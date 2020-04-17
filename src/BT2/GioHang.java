@@ -43,10 +43,11 @@ public class GioHang {
     
     public void inGioHang()
     {
-        for (int i = 0; i < dsHangHoa.size(); i++)
+        System.out.println("Danh sách hàng hóa");
+        for (int i = 0; i < this.dsHangHoa.size(); i++)
         {
-            System.out.println((i+1));
-            System.out.println(dsHangHoa.get(i).inTTHangHoa());
+            System.out.print((i+1 + ":"));
+            System.out.println(this.dsHangHoa.get(i).inTTHangHoa());
         }
     }
 }

@@ -49,7 +49,7 @@ public class HangHoa {
     }
     public String inTTHangHoa()
     {
-        return "Tên hàng: " + this.tenHH + "|Giá: " + this.gia + "|Mô tả: " + this.moTa +"\n";
+        return "Tên hàng: " + this.tenHH + "|Giá: " + this.gia + "|Mô tả: " + this.moTa;
     }
     
 }
